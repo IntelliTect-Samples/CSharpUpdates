@@ -15,4 +15,11 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="11\" />
+    <Folder Include="10\" />
+    <Folder Include="09\" />
+    <Folder Include="08\" />
+  </ItemGroup>
+
 </Project>
