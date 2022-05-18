@@ -35,7 +35,6 @@ public class PropertyPatternMatchingImprovements
     }
 
     [TestMethod]
-    [ExpectedException(typeof(InvalidOperationException))]
     public void PropertyPatternMatching_GivenPersonWithEmptyName_Trhow()
     {
         Person person = new("");

@@ -96,6 +96,7 @@ public class NullableReferenceTypeTests
     }
 
     [TestMethod]
+    [Ignore("Scratch code")]
     public void ReferenceEquals_GivenNull_NullCheckNotDetected()
     {
         string? text = null;
