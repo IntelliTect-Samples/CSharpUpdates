@@ -20,8 +20,9 @@ public class SampleUnitTest
     }
 
     [TestMethod]
+    [ExpectedException(typeof(ArgumentNullException))]
     public void NotNull_GivenNullForName_BreakOnNameProperty()
     {
-        _ = new Person(null);
+        _ = new Person(null!);
     }
 }
