@@ -1,6 +1,7 @@
-﻿namespace EssentialCSharp10.Tests;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+namespace EssentialCSharp10.Tests;
 
-
+[TestClass]
 public class SampleUnitTest
 {
     class Person
@@ -16,5 +17,11 @@ public class SampleUnitTest
             
         }
         private string? _Name;
+    }
+
+    [TestMethod]
+    public void NotNull_GivenNullForName_BreakOnNameProperty()
+    {
+        _ = new Person(null);
     }
 }
