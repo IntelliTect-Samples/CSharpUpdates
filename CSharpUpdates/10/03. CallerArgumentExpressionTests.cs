@@ -1,5 +1,6 @@
 ﻿namespace EssentialCSharp10.Tests;
 
+
 public class SampleUnitTest
 {
     class Person
@@ -10,7 +11,9 @@ public class SampleUnitTest
         public string Name 
         { 
             get => _Name!;
-            set => _Name = value;
+            set => _Name = 
+                NotNull(value);
+            
         }
         private string? _Name;
     }
