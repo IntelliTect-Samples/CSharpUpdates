@@ -80,6 +80,7 @@ public class NullableReferenceTypeTests
             zip: "99035",
             country: "United Kingdom");
     }
+
     [TestMethod]
     [ExpectedException(typeof(ArgumentNullException))]
     public void Address_CreateWitNullZip_ThrowException()
@@ -95,6 +96,23 @@ public class NullableReferenceTypeTests
             country: "United Kingdom");
     }
 
+    [TestMethod]
+    public void CheckingForNull()
+    {
+        string? text = null;
+        if(text == null)
+        {
+            text = "";
+        }
+        if (text is null)
+        {
+            text = "";
+        }
+        else
+        {
+            Assert.IsTrue(text is not null);
+        }
+    }
     [TestMethod]
     [Ignore("Scratch code")]
     public void ReferenceEquals_GivenNull_NullCheckNotDetected()
