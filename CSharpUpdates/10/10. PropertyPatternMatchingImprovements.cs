@@ -38,7 +38,8 @@ public class PropertyPatternMatchingImprovements
     public void PropertyPatternMatching_GivenPersonWithEmptyName_Trhow()
     {
         Person person = new("");
-
+        var person1 = new Person("");  // Obsolete
+        string name = person1.Name;
         AssertValidPerson(person);
     }
 

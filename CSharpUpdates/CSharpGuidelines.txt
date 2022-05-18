@@ -15,3 +15,6 @@ DO declare non-nullable reference type properties as follows:
             get => _zip!; 
             private set => _zip=value??throw new ArgumentNullException(nameof(value)); 
         }
+DO use inferred constructor when instantiating a variable of the type assigned.
+	e.g. Person person = new("Inigo Montoya"); // Rather than Person person = new Person("Inigo Mongoay") 
+	(and never var person = GetName("Inigo Montoya""))
