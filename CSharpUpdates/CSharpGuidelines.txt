@@ -1,0 +1,17 @@
+﻿
+Guidelines Options
+	DO NOT
+	DO
+	AVOID
+	CONSIDER
+
+DO use file based namespaces.
+DO place global using statements into GlobalUsings.cs or into the Using element of the project file.
+DO NOT access fields from outside their wrapping property.
+DO declare non-nullable reference type properties as follows:
+	    private string? _zip;
+        public string Zip 
+        { 
+            get => _zip!; 
+            private set => _zip=value??throw new ArgumentNullException(nameof(value)); 
+        }
